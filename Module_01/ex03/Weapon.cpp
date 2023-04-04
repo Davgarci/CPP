@@ -6,11 +6,13 @@
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 18:06:58 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/04 19:43:27 by davgarci         ###   ########.fr       */
+/*   Updated: 2023/04/04 20:49:57 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Weapon.hpp"
+
+Weapon::Weapon() {}
 
 Weapon::Weapon(std::string weapon){
 	_type = weapon;

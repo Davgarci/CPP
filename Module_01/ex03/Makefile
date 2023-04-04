@@ -1,6 +1,6 @@
 NAME = zombie
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp\
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp \
 
 		
 		
