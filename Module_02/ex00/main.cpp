@@ -5,23 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 03:26:03 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/05 13:09:48 by davgarci         ###   ########.fr       */
+/*   Created: 2023/04/05 13:24:38 by davgarci          #+#    #+#             */
+/*   Updated: 2023/04/05 20:52:04 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include "Fixed.hpp"
+#include <fstream>
 #include <iostream>
 
-#include "Harl.hpp"
-
-int	main( void )
-{
-	Harl harl;
-
-	harl.complain("debug");
-	harl.complain("info");
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("otro");
-}
+ int main(void){
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return(0);
+ }

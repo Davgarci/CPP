@@ -1,6 +1,6 @@
-NAME = harl
+NAME = fixed
 
-SRCS = main.cpp Harl.cpp \
+SRCS = main.cpp Fixed.cpp \
 
 		
 		
@@ -24,6 +24,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-		./harl
+		./fixed
 
 .PHONY: all, clean, fclean, re

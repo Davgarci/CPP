@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 03:26:03 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/05 13:09:48 by davgarci         ###   ########.fr       */
+/*   Created: 2023/04/05 13:25:06 by davgarci          #+#    #+#             */
+/*   Updated: 2023/04/05 21:17:35 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include <iostream>
+# ifndef FIXED_HPP
+# define FIXED_HPP
 
-#include "Harl.hpp"
+class Fixed {
+	private:
+		int _full;
+		const static int _fractional_bit = 8;
+	public:
+		Fixed(void);
+		~Fixed();
+		Fixed(Fixed &hello);
+		Fixed& operator=(Fixed &hello);
 
-int	main( void )
-{
-	Harl harl;
+		int getRawBits( void ) const;
+		void setRawBits ( int const raw );
+};
 
-	harl.complain("debug");
-	harl.complain("info");
-	harl.complain("warning");
-	harl.complain("error");
-	harl.complain("otro");
-}
+# endif
