@@ -6,7 +6,7 @@
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 22:45:58 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/02 20:31:31 by davgarci         ###   ########.fr       */
+/*   Updated: 2023/04/07 20:39:16 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 	while (true)
 	{
 		std::cout << "Your option: " ;
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (input == "ADD")
 			A.addContact();
 		else if (input == "SEARCH")

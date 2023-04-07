@@ -6,7 +6,7 @@
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 21:27:59 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/02 21:44:22 by davgarci         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:12:32 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,26 +49,32 @@ void		PhoneBook::init(void) const {
  void		PhoneBook::addContact() {
 	std::string aux;
 	Contact prueba;
-	
+	aux = "";
 	std::cout << std::endl << "Name: " ;
-	std::cin >> aux;
+	while (aux.length() <= 0)
+		std::getline(std::cin, aux);
 	this->_persons[this->_i].setName(aux);
-	
+	aux = "";
 	std::cout << "Last name: " ;
-	std::cin >> aux;
+	while (aux.length() <= 0)
+		std::getline(std::cin, aux);
 	this->_persons[this->_i].setLast(aux);
-
+	aux = "";
 	std::cout << "Nick: " ;
-	std::cin >> aux;
+	while (aux.length() <= 0)
+		std::getline(std::cin, aux);
 	this->_persons[this->_i].setNick(aux);
-
+	aux = "";
 	std::cout << "Phone: " ;
-	std::cin >> aux;
+	while (aux.length() <= 0)
+		std::getline(std::cin, aux);
 	this->_persons[this->_i].setPhone(aux);
-
+	aux = "";
 	std::cout << "Dark secret: " ;
-	std::cin >> aux;
+	while (aux.length() <= 0)
+		std::getline(std::cin, aux);
 	this->_persons[this->_i].setDark(aux);
+	aux = "";
 
 	std::cout << "Contact " << this->_i + 1 << " saved" << std::endl << std::endl;
 	
@@ -80,6 +86,7 @@ void		PhoneBook::init(void) const {
  void		PhoneBook::search(void){
 	int i = 0;
 	int aux;
+	std::string str;
 	std::string dash = "-";
 	std::cout << "|----IN----|----FN----|----LN----|----NK----|" << std::endl;
 	while (this->_persons[i].getName().length() != 0 && i < 8){
@@ -136,7 +143,15 @@ void		PhoneBook::init(void) const {
 	}
 	
 	std::cout << "What contact do you want to see?" << std::endl << "Input index: " ;
-	std::cin >> aux;
+	str = "";
+	while (str == "")
+	{
+		std::getline(std::cin, str);
+		if (str[0] >='0' && str[0] <='9')
+			aux = std::stoi(str);
+		else
+			str = "";
+	}
 	aux = aux - 1;
 	if (aux < 0 || aux > i - 1)
 		std::cout << "Invalid index" << std::endl;
