@@ -6,7 +6,7 @@
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 23:37:24 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/07 23:43:44 by davgarci         ###   ########.fr       */
+/*   Updated: 2023/04/08 22:38:37 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ class Cat : public Animal{
 	public:
 		Cat();
 		~Cat();
-		Cat(Cat &Cat);
-		Cat& operator=(Cat &Cat);
-		
-		virtual void 	makeSound() const;
-		std::string 	getType() const;
+		Cat(Cat &instance);
+		Cat& operator=(Cat &instance);
+
+		virtual void	makeSound() const;
+		//std::string 	getType() const; //no necesitamos getter??
 };
 
 #endif

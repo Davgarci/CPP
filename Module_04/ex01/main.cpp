@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 23:39:07 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/07 23:44:24 by davgarci         ###   ########.fr       */
+/*   Created: 2023/04/08 14:22:45 by davgarci          #+#    #+#             */
+/*   Updated: 2023/04/09 03:08:23 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
-
 #include "animal.hpp"
-class Dog : public Animal{
-	public:
-		Dog();
-		~Dog();
-		Dog(Dog &Dog);
-		Dog& operator=(Dog &Dog);
-		
-		virtual void 	makeSound() const;
-		std::string 	getType() const;
-};
-#endif
+#include "dog.hpp"
+#include "cat.hpp"
+
+int main()
+{
+const Animal* j = new Dog();
+const Animal* i = new Cat();
+delete j;//should not create a leak
+delete i;
+
+return 0;
+}
