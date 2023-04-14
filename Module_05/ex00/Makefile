@@ -1,4 +1,4 @@
-NAME = animal
+NAME = buro
 
 SRCS = main.cpp  Bureaucrat.cpp \
 
@@ -24,6 +24,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-		./animal
+		./buro
 
 .PHONY: all, clean, fclean, re
