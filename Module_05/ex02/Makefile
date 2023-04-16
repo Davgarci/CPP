@@ -1,6 +1,6 @@
 NAME = buro
 
-SRCS = main.cpp  Bureaucrat.cpp Form.cpp\
+SRCS = main.cpp  Bureaucrat.cpp \
 
 		
 		
