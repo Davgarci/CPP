@@ -1,26 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davgarci <davgarci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 15:19:10 by davgarci          #+#    #+#             */
-/*   Updated: 2023/04/22 20:27:46 by davgarci         ###   ########.fr       */
+/*   Created: 2023/04/21 23:53:54 by davgarci          #+#    #+#             */
+/*   Updated: 2023/04/22 20:07:41 by davgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
-
-int main(){
-	Zombie *A;
-	A = zombieHorde(5, "ZZZZ");
-
-	A[0].anounce();
-	A[1].anounce();
-	A[2].anounce();
-	A[3].anounce();
-	A[4].anounce();
-	delete [] A;
-	return(0);
-}
+#include Array.hpp
